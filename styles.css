@@ -93,3 +93,9 @@ button:hover {
     color: #333;
     line-height: 1.5;
 }
+
+.not-found {
+    color: #FF0000 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -70,7 +70,7 @@ $superheroes = [
 $query = isset($_GET['query']) ? trim($_GET['query']) : '';
 
 if ($query === '') {
-    // Display the complete list when the search field is empty.
+    
     echo '<ul>';
 
     foreach ($superheroes as $superhero) {
@@ -80,7 +80,7 @@ if ($query === '') {
     echo '</ul>';
 
 } else {
-    // Search for a superhero by full name or alias.
+    
     $found = false;
 
     foreach ($superheroes as $superhero) {
@@ -98,7 +98,7 @@ if ($query === '') {
     }
 
     if (!$found) {
-        echo '<p>Superhero not found</p>';
+       echo '<p class="not-found">SUPERHERO NOT FOUND</p>';
     }
 }
 
