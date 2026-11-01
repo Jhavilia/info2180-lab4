@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #888888;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #000;
+}
+
+.search-section {
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
