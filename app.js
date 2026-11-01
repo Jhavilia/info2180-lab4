@@ -1,9 +1,10 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.getElementById('search-btn');
     const searchBox = document.getElementById('search-box');
     const resultDiv = document.getElementById('result');
 
-    searchBtn.addEventListener('click', () => {
+    function searchSuperheroes() {
         const query = searchBox.value.trim();
         const encodedQuery = encodeURIComponent(query);
 
@@ -20,8 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
                 console.error('Error fetching superhero data:', error);
-
                 resultDiv.textContent = 'An error occurred while searching.';
             });
+    }
+
+    
+    searchSuperheroes();
+
+    
+    searchBtn.addEventListener('click', searchSuperheroes);
+
+
+    searchBox.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+            searchSuperheroes();
+        }
     });
 });
